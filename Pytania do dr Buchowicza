@@ -1,0 +1,14 @@
+# Pytania od Łukasz Królak
+
+1. Czy tak zwany scope naszego projektu, jak ja to widze, to te 4 elementy: Koder (1) oraz Dekoder (2) algorytmem DYNAMICZNYM Huffmana, Koder (3) algorytmem statycznym Huffmana (w celach porównawnczych) oraz generator (4) ciągów o danych rozkładach. Czy te elementy muszą być zintegrowane w jeden program czy możemy je robić zupełnie oddzielnie
+2. Czy potrzebne jest GUI czy wystarczy program w terminalu
+3. Obrazy naturalne - czy bedzie przyjęty z góry format, czy mamy operować na dowolnym obrazie naturalnym. Czy wogóle mamy brać pod uwagę strukturę pliku jeśli jest określony format czy zignorować to i potraktować jako plik binarny. Czy są jakieś obostrzenia co do przyjętego do porównania przez nas obrazu testowego
+4. Generator ciągów o rozkładach - rozkład czego na czym (sądzę że to ma być rozkład prawdopodobieństwa wystąpienia danego symbolu na dyskretnym wykresie symboli - ale chcę się upewnić)
+5. Jak ma wyglądać plik wyjściowy po zakodowaniu (plik binarny???)
+6. Jak ocenić efektywność - czy tylko spojrzeć na wielkośc pliku wejściowego oraz wyjściowego, czy mamy również porównać z innymi rozwiązaniami (np. komercyjnymi)
+7. Szczegóły implementacji kodeka dynamicznego - są tutaj dwa algorytmy: Fallera-Gallera-Knutha, oraz Vittera. Czy mamy tutaj dowolność czy jest jakaś preferencja? 
+8. Czy są jakiekolwiek wymagania/preferencje platformowe (chwilowo z tego co wiem zakładamy GCC na linuksie z opcja robienia tego na windowsie przez codeblocksa ktory korzysta rowniez z GCC - czyli generalnie GCC)
+9. Zakladajac że plik wejściowy traktujemy jako plik binarny (ciag 0-1) i tak go bedziemy traktować kodując - skąd mamy wziąść długość słowa na wejściu kodera ? Zakładam tutaj że długość słowa będzie stała, ale jakąś trzeba przyjąć. W przypadku statycznym można by było oszacować jaka długość słowa zapewni najlepszy współczynnik kompresji, ale w przypadku dynamicznym nie ma specjalnie takiej opcji - już w pierwszej iteracji trzeba założyć długość słowa.
+10. W przypadku kodera statycznego - czy rzeczywiście ma być to tylko koder (w celach porównawczych), czy także dekoder.
+
+To tyle :) Wrzuccie swoje pytania i przejdziemy się z tym do Buchowicza bo pisać to w mailu to jakaś masakra.
