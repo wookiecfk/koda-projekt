@@ -10,5 +10,6 @@
 8. Czy są jakiekolwiek wymagania/preferencje platformowe (chwilowo z tego co wiem zakładamy GCC na linuksie z opcja robienia tego na windowsie przez codeblocksa ktory korzysta rowniez z GCC - czyli generalnie GCC)
 9. Zakladajac że plik wejściowy traktujemy jako plik binarny (ciag 0-1) i tak go bedziemy traktować kodując - skąd mamy wziąść długość słowa na wejściu kodera ? Zakładam tutaj że długość słowa będzie stała, ale jakąś trzeba przyjąć. W przypadku statycznym można by było oszacować jaka długość słowa zapewni najlepszy współczynnik kompresji, ale w przypadku dynamicznym nie ma specjalnie takiej opcji - już w pierwszej iteracji trzeba założyć długość słowa.
 10. W przypadku kodera statycznego - czy rzeczywiście ma być to tylko koder (w celach porównawczych), czy także dekoder.
+11. Czy mamy wygenerować jakąś dokumentację (mam nadzieję że nie) - czy mamy zrobić jakiś raport podsumowujący.
 
 To tyle :) Wrzuccie swoje pytania i przejdziemy się z tym do Buchowicza bo pisać to w mailu to jakaś masakra.
