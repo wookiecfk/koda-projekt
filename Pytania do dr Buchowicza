@@ -14,3 +14,8 @@
 12. Co do rozkładów generatora plików - czy mamy wyprowadzać na zewnątrz parametry rozkładów tak aby użytkownik je podawał (zarówno normalny, jak i Laplace'a mają przynajmniej 2 parametry) czy wystarczy jak zahardkodujemy jakiś rozkład (zahardkodujemy wartości) o takiej charakerystyce.
 
 To tyle :) Wrzuccie swoje pytania i przejdziemy się z tym do Buchowicza bo pisać to w mailu to jakaś masakra.
+
+# Pytania od Grzegorz Pietrzak
+1. Ad pytanie 3 @Łukasz Królak - jak należy rozumieć w poleceniu słowo "ocenić"? Czy mamy faktycznie wczytywać jakieś pliki i robić testy, czy po prostu mamy na podstawie wcześniejszych przemyśleń wyciągnąć wnioski dotyczace tego, jak ten algorytm radziłby sobie z obrazami naturalnymi?
+2. Pytanie: czy podstawowym celem naszego projektu jest napisanie kodu, czy przeprowadzenie eksperymentów z wykorzystaniem tego kodu i napisanie raportu z wnioskami?
+Podejrzewam, że do drugie i wtedy będą dla nas kluczowe pytania 1, 4, 6, 7, 10 od @Łukasz Królak
