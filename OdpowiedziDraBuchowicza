@@ -1,0 +1,14 @@
+﻿1. Czy podstawowym celem naszego projektu jest napisanie kodu, czy przeprowadzenie eksperymentów z wykorzystaniem tego kodu i napisanie raportu z wnioskami?
+* Naszym celem jest jedno i drugie. Ale pisanie kodu ma być podporzadkowane stworzeniu raportu. Nasz program nie musi mieć jakiegoś wybitnego GUI. Powinien nam umożliwić przeprowadzenie testów. Oczywiście Buchowicz chętnie sobie ten program u siebie uruchomi, żeby go przetestować, ale nie będzie oceniał wygody użytkowania.
+2. Pytanie o obrazy naturalne, o to, jakie one mają być, jaki ma być ich format itd.
+* Buchowicz powiedział, że badane przez nas przedtem rozkłady prawdopodobieństwa różnią się od tych, jakie mają obrazy naturalne. Dlatego mamy sobie wczytać jakieś obrazy i przetestować. Format, sposób wczytywania itd. to już nasza sprawa - z tym, że Buchowicz nam sugeruje przetestowanie obrazu Lena, bo on jest standardem, do którego się wszyscy odnoszą.
+3. Jak ma wyglądać plik wyjściowy po zakodowaniu (plik binarny???) *To w zasadzie od nas zależy. Celem jest realizacja kodowania. 4. "Generator ciągów o rozkładach"
+* mamy wykorzystać standardowe generatory pseudolosowe dostępne w bibliotekach do generacji ciągów symboli.
+5. Czy mamy porównywać naszą implementację Huffmana z np. implementacjami komercyjnymi, będącymi częścią różnych standardów?
+* Nie. Bo zresztą trudno by było z implementacji jakiegoś standardu wyciągnąć częścią odpowiedzialną tylko za Huffmana.
+6. W przypadku kodera statycznego - czy rzeczywiście ma być to tylko koder (w celach porównawczych), czy także dekoder.
+* Lepiej dekoder też zakodzić, będzie to pewien sposób weryfikacji, czy koder został zakodzony prawidłowo.
+7. Czy mamy wygenerować jakąś dokumentację (mam nadzieję że nie) - czy mamy zrobić jakiś raport podsumowujący.
+* O ile dobrze pamiętam, Buchowicz powiedział, że mamy wygenerować tylko program, instrukcję do niego, wyniki eksperymentów i raport.
+8. Co do rozkładów generatora plików - czy mamy wyprowadzać na zewnątrz parametry rozkładów tak aby użytkownik je podawał (zarówno normalny, jak i Laplace'a mają przynajmniej 2 parametry) czy wystarczy jak zahardkodujemy jakiś rozkład (zahardkodujemy wartości) o takiej charakerystyce.
+* Tutaj też Buchowicz mówił, że to wszystko od nas zależy.
