@@ -1,6 +1,7 @@
 #include <string>
 #include <iostream>
 #include "huffmanType.h"
+#include "../fileIO.h"
 
 int staticCoder(std::string fileName);
 

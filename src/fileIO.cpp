@@ -24,3 +24,11 @@ int readFile (std::string &fileName, int &fileSize, unsigned char *&dataPtr)
 		return 0;
 }
 
+void writeFile (std::string &fileName, int &fileSize, unsigned char *&dataPtr)
+{
+	const char * fileNameChar = fileName.c_str();
+
+	ofstream myFile (fileNameChar, ios::out | ios::binary);
+    	myFile.write ((char*)dataPtr, fileSize);		
+}
+

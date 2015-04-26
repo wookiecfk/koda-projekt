@@ -18,6 +18,10 @@ int staticCoder(std::string fileName)
 		std::cout << "Nie mozna wczytac pliku!" <<std::endl;
 		return 0;
 	}
+
+	//test for writeFile - IT WORKS 
+	/*std::string fileNameOutput = "testedWrittenFile";
+	writeFile(fileNameOutput, fileSize, dataPtr);*/
 	
 	//Liczenie prawdopodobienstwa
 	countProb(fileSize, dataPtr, prob);
@@ -90,7 +94,7 @@ int findSubtree(node *nodes[], int val, int sign)
 	{
 		//if(i != sign)
 		{   
-			//int tmpValue = nodes[i]->value;
+			int tmpValue = nodes[i]->value;
 			//std::cout <<"i: " << i << " tmpVal " << tmpValue << " nodes[sign]: " << nodes[sign]->value <<std::endl;
 			//if(tmpValue < nodes[sign]->value && tmpValue > res && tmpValue != val && tmpValue != -1)
 			if(nodes[i]->value < nodes[index]->value && i != val && nodes[i]->value != -1)
