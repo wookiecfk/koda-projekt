@@ -33,6 +33,10 @@ int staticCoder(std::string fileName)
 	for(int i = 0; i < dictionarySize; i++)
 		std::cout<< i << " " << codedSymbols[i] << std::endl;
 
+	std::string dictionaryOutputName = fileName;
+	dictionaryOutputName.append(".txt");
+	writeDictionary(dictionaryOutputName, codedSymbols);
+
 	delete[] dataPtr;
 	delete[] prob;
 	return 1;
@@ -94,7 +98,7 @@ int findSubtree(node *nodes[], int val, int sign)
 	{
 		//if(i != sign)
 		{   
-			int tmpValue = nodes[i]->value;
+			//int tmpValue = nodes[i]->value;
 			//std::cout <<"i: " << i << " tmpVal " << tmpValue << " nodes[sign]: " << nodes[sign]->value <<std::endl;
 			//if(tmpValue < nodes[sign]->value && tmpValue > res && tmpValue != val && tmpValue != -1)
 			if(nodes[i]->value < nodes[index]->value && i != val && nodes[i]->value != -1)

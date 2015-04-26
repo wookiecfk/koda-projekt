@@ -24,11 +24,33 @@ int readFile (std::string &fileName, int &fileSize, unsigned char *&dataPtr)
 		return 0;
 }
 
-void writeFile (std::string &fileName, int &fileSize, unsigned char *&dataPtr)
+int writeFile (std::string &fileName, int &fileSize, unsigned char *&dataPtr)
 {
 	const char * fileNameChar = fileName.c_str();
 
 	ofstream myFile (fileNameChar, ios::out | ios::binary);
-    	myFile.write ((char*)dataPtr, fileSize);		
+	if (myFile.is_open()){
+    		myFile.write ((char*)dataPtr, fileSize);
+		return 1;
+	}
+	else 
+		return 0;		
 }
+
+int writeDictionary (std::string &fileName, std::string *fileContent)
+{
+	const char * fileNameChar = fileName.c_str();
+	ofstream myFile (fileNameChar);
+	if (myFile.is_open())
+  	{
+		for(int i=1; i<=dictionarySize; i++){
+			myFile<<i<<" "<<fileContent[i-1]<<std::endl;
+		}
+    		myFile.close();
+
+		return 1;
+	}
+	else
+		return 0;
+} 
 
