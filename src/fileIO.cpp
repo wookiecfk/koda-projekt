@@ -4,7 +4,10 @@ using namespace std;
 int readFile (std::string &fileName, int &fileSize, unsigned char *&dataPtr) 
 {
 	int size;
-	ifstream file (fileName, ios::in|ios::binary|ios::ate);
+	//std::string --> const char * conversion required by my compiler
+	const char * fileNameChar = fileName.c_str();
+
+	ifstream file (fileNameChar, ios::in|ios::binary|ios::ate);
 
 	if (file.is_open())
 	{
