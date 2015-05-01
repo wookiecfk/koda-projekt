@@ -24,6 +24,85 @@ int readFile (std::string &fileName, int &fileSize, unsigned char *&dataPtr)
 		return 0;
 }
 
+int writeEncodeFile(std::string &fileName, std::string &encodeData)
+{
+	long int dataSize = encodeData.length();
+	long int missed = 8 -(dataSize % 8);
+	char extraChar = missed;
+	//std::cout <<"missed: "<<missed << "\n";
+	boost::dynamic_bitset<unsigned char> bitStream(encodeData);
+	//std::cout <<"streamsize: "<<bitStream.size() << "\n";
+	/*for(int i = 0; i < dataSize; i++)
+		bitStream[i] = encodeData[i];*/
+	/*for(int i = 0; i < 16; i++)
+	std::cout << bitStream[i] << " " << encodeData[(dataSize-1)-i]<<"\n";*/
+	char one = 1;
+	char zero = 0;
+	std::ofstream myFile (fileName.c_str(), ios::out | ios::binary);
+	if (myFile.is_open())
+	{
+		long int tmp = dataSize+missed;
+		int i = 0;
+		while(i < tmp)
+		{
+			char sign = 0;
+			for(int j = i; j < i+8; j++)
+				if(bitStream[j] == 1)
+					sign = sign << 1 | one;
+				else
+					sign = sign << 1 | zero;
+			//std::cout << (int)sign<<std::endl;
+    		myFile << sign;
+			i += 8;
+		}
+		myFile << extraChar;
+		myFile.close();
+		
+		return 1;
+	}
+	else 
+		return 0;		
+}
+
+int writeDictionary (std::string &fileName, std::string *fileContent)
+{
+	const char * fileNameChar = fileName.c_str();
+	ofstream myFile(fileNameChar);
+	
+	if (myFile.is_open())
+  	{
+		for(int i=0; i<dictionarySize; i++){
+			myFile << i << " " << fileContent[i].c_str() << std::endl;
+		}
+    		myFile.close();
+
+		return 1;
+	}
+	else
+		return 0;
+} 
+
+int loadDictionary(std::string &fileName, std::map<std::string, int> &dictionary)
+{
+	std::ifstream infile(fileName.c_str());
+	
+	if(infile.is_open())
+	{
+		for(int i = 0; i < dictionarySize; i++)
+		{
+			int value; 
+			infile >> value;
+			std::string key;
+			infile >> key;
+			dictionary[key] = value;
+		}
+		infile.close();
+		return 1;
+	}
+	else
+		return 0;	
+}
+
 int writeFile (std::string &fileName, int &fileSize, unsigned char *&dataPtr)
 {
 	const char * fileNameChar = fileName.c_str();
@@ -36,21 +115,3 @@ int writeFile (std::string &fileName, int &fileSize, unsigned char *&dataPtr)
 	else 
 		return 0;		
 }
-
-int writeDictionary (std::string &fileName, std::string *fileContent)
-{
-	const char * fileNameChar = fileName.c_str();
-	ofstream myFile (fileNameChar);
-	if (myFile.is_open())
-  	{
-		for(int i=1; i<=dictionarySize; i++){
-			myFile<<i<<" "<<fileContent[i-1]<<std::endl;
-		}
-    		myFile.close();
-
-		return 1;
-	}
-	else
-		return 0;
-} 
-

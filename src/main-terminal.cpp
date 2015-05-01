@@ -31,11 +31,11 @@ int main(int argc, const char* argv[]){
 				break;
 
 			case HUFFMAN_STATIC_DECODER:
-					if(staticDecoder(fileName))
-						std::cout << "Dekodowanie zakonczone.";
-					else
-						std::cout << "Dekodowanie nie powiodlo sie!";
-					break;
+				if(staticDecoder(fileName))
+					std::cout << "Dekodowanie zakonczone.";
+				else
+					std::cout << "Dekodowanie nie powiodlo sie!";
+				break;
 
 			case HUFFMAN_DYNAMIC_CODER:
 			//call the proper function
